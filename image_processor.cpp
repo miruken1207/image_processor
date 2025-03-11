@@ -1,7 +1,10 @@
 #include <iostream>
+#include <fstream>
 
 void Manual() {
-    std::cout << "This is the Manual of image_processor programm.\n";
+    std::ifstream manual_file("manual.txt");
+    std::cout << manual_file.rdbuf();
+    manual_file.close();
 }
 
 int main(int argc, char *argv[]) {
